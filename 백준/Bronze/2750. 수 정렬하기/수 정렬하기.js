@@ -1,0 +1,11 @@
+const fs = require("fs");
+const input = fs.readFileSync(0, 'utf-8').toString().trim().split("\n");
+
+const N = Number(input[0]);
+let arr = [];
+for (let i = 1; i <= N; i++) {
+  arr.push(Number(input[i]));
+}
+
+const sorted = arr.sort((a, b) => a - b);
+console.log(sorted.join("\n"));
